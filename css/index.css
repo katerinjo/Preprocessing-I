@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -139,6 +139,25 @@ body {
   margin: auto;
   font-family: "Noto Sans", sans-serif;
 }
+body h2 {
+  font-size: 2rem;
+  padding: 12px 0;
+}
+body table {
+  border-collapse: collapse;
+}
+body table th {
+  font-weight: bold;
+}
+body table td,
+body table th {
+  border: 1px solid #808080;
+  padding: 12px;
+}
+body ul li {
+  border: 1px solid #808080;
+  padding: 12px;
+}
 body nav {
   display: flex;
   justify-content: flex-end;
@@ -183,4 +202,14 @@ body button {
   color: white;
   padding: 18px;
   margin: 12px;
+}
+body .panels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+body .panels div {
+  width: 40%;
+  padding: 12px;
 }

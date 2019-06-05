@@ -55,7 +55,8 @@ table {
 
 @light-color: rgb(233, 236, 239);
 @dark-color: rgb(128, 128, 128);
-@stndrd-pad: 8px;
+@stndrd-pad: 12px;
+@big-pad: 18px;
 @normal-font: "Noto Sans", sans-serif;
 @dark-text: black;
 @light-text: white;
@@ -96,7 +97,21 @@ body {
 	}
 	.top-panel {
 		background: @light-color;
-		padding: @stndrd-pad;
+		padding: @big-pad;
+		div {
+			margin: @big-pad 0;
+		}
+	}
+	.profile {
+		padding: @stndrd-pad 0;
+		border-bottom: 1px solid @dark-color;
+		h1 {
+			font-size: 5rem;
+			padding: @stndrd-pad 0;
+		}
+		h2 {
+			font-size: 2rem;
+		}
 	}
 	.sourced {
 		.flex-down();
@@ -107,6 +122,11 @@ body {
 			.minor();
 		}
 
+	}
+	button {
+		.dark-theme();
+		padding: @big-pad;
+		margin: @stndrd-pad;
 	}
 }
 

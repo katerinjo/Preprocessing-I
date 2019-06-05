@@ -213,3 +213,22 @@ body .panels div {
   width: 40%;
   padding: 12px;
 }
+body .column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+body .column div {
+  width: 100%;
+  padding: 12px 0;
+}
+body .column div table {
+  width: 100%;
+}
+body footer {
+  padding: 36px;
+  text-align: center;
+  background: #808080;
+  color: white;
+}

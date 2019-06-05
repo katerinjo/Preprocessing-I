@@ -1,5 +1,5 @@
 // Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -13,8 +13,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -25,7 +25,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -53,7 +53,129 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+@light-color: rgb(233, 236, 239);
+@dark-color: rgb(128, 128, 128);
+@stndrd-pad: 12px;
+@big-pad: 18px;
+@normal-font: "Noto Sans", sans-serif;
+@dark-text: black;
+@light-text: white;
+
+.dark-theme() {
+	background: @dark-color;
+	color: @light-text;
+}
+
+.flex-down() {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.minor() {
+	font-size: 1rem;
+	color: @dark-text;
+}
+
+.boxed() {
+	border: 1px solid @dark-color;
+	padding: @stndrd-pad;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	width: 960px;
+	margin: auto;
+	font-family: @normal-font;
+	h2 {
+		font-size: 2rem;
+		padding: @stndrd-pad 0;
+	}
+	table {
+		border-collapse: collapse;
+		th {
+			font-weight: bold;
+		}
+		td, th {
+			.boxed();
+		}
+	}
+	ul {
+		li {
+			.boxed();
+		}
+	}
+	nav {
+		display:flex;
+		justify-content: flex-end;
+		a {
+			text-decoration: none;
+			padding: @stndrd-pad;
+			color: @dark-text;
+		}
+	}
+	.top-panel {
+		background: @light-color;
+		padding: @big-pad;
+		div {
+			margin: @big-pad 0;
+		}
+	}
+	.profile {
+		padding: @stndrd-pad 0;
+		border-bottom: 1px solid @dark-color;
+		h1 {
+			font-size: 5rem;
+			padding: @stndrd-pad 0;
+		}
+		h2 {
+			font-size: 2rem;
+		}
+	}
+	.sourced {
+		.flex-down();
+		img {
+			max-width: 500px;
+		}
+		a {
+			.minor();
+		}
+
+	}
+	button {
+		.dark-theme();
+		padding: @big-pad;
+		margin: @stndrd-pad;
+	}
+	.panels {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: space-between;
+		div {
+			width: 40%;
+			padding: @stndrd-pad;
+		}
+	}
+	.column {
+		.flex-down();
+		text-align: center;
+		div {
+			width: 100%;
+			padding: @stndrd-pad 0;
+			table {
+				width: 100%;
+			}
+		}
+	}
+	footer {
+		padding: @big-pad * 2;
+		text-align: center;
+		.dark-theme();
+	}
 }
 

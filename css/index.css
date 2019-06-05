@@ -132,5 +132,18 @@ table {
 }
 html,
 body {
-  height: 100%;
+  width: 960px;
+  margin: auto;
+  font-family: "Noto Sans", sans-serif;
+}
+html nav,
+body nav {
+  display: flex;
+  justify-content: flex-end;
+}
+html nav a,
+body nav a {
+  text-decoration: none;
+  padding: 8px;
+  color: black;
 }
